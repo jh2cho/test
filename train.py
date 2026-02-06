@@ -14,6 +14,9 @@ DEFAULTS = {
 }
 
 task = Task.current_task()
+if task is None:
+    task = Task.init(project_name="vision_od", task_name="yolo_train_ui")  # 필요 시 이름만 수정
+
 
 params = task.connect(DEFAULTS, name="yolo")
 
