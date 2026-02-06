@@ -2,7 +2,7 @@ from clearml import Dataset
 from ultralytics import YOLO
 from pathlib import Path
 
-DATASET_ID = "0c40d8a5eec34757a132b01654ead6f8"
+DATASET_ID = "57a033aab55141b0ae379b0b31465f9b"
 
 # ClearML UI에서 "Add Task.init call"을 켰다면 여기서 Task.init() 호출하지 말 것!
 # (UI가 자동으로 Task.init을 삽입해줌)
