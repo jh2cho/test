@@ -39,3 +39,20 @@ results = model.train(
 
 save_dir = Path(model.trainer.save_dir).resolve()
 print("Save dir:", save_dir)
+
+# ---------- Upload artifacts ----------
+weights_dir = save_dir / "weights"
+best_pt = weights_dir / "best.pt"
+last_pt = weights_dir / "last.pt"
+
+if best_pt.is_file():
+    task.upload_artifact(name="best.pt", artifact_object=str(best_pt))
+    print("Uploaded:", best_pt)
+else:
+    print("best.pt not found:", best_pt)
+
+if last_pt.is_file():
+    task.upload_artifact(name="last.pt", artifact_object=str(last_pt))
+    print("Uploaded:", last_pt)
+else:
+    print("last.pt not found:", last_pt)
