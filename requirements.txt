@@ -1,0 +1,5 @@
+ultralytics
+clearml
+torch
+pyyaml
+opencv-python
