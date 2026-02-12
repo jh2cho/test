@@ -7,7 +7,7 @@ import yaml
 DEFAULTS = {
     "dataset_id": "57a033aab55141b0ae379b0b31465f9b",  
     "model": "yolov8n.pt",
-    "epochs": 100,
+    "epochs": 3,
     "batch": 16,
     "imgsz": 640,
     "device": 0,
